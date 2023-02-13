@@ -1,0 +1,55 @@
+<!-- <p>add-restaurant works!</p> -->
+<mat-card>
+  <h1>Add Items</h1>
+<form class="example-form" [formGroup]="restaurantDetails">
+    <mat-form-field class="example-full-width" appearance="fill">
+      <input matInput placeholder="Restaurant Name.." type="text" value="" formControlName="restaurantName">
+      <mat-error *ngIf="restaurantName?.errors?.required">
+        RestaurantName is required.
+    </mat-error>
+    </mat-form-field>
+    <!-- <mat-form-field class="example-full-width">
+        <input matInput placeholder="Location.." type="text" value="" formControlName="location">
+        <mat-error *ngIf="location?.errors?.required">
+          Location is required.
+      </mat-error>
+      </mat-form-field> -->
+      <div formGroupName="foodList" > <span>Enter foodList</span> 
+      <mat-form-field class="example-full-width" appearance="fill">
+        <input matInput placeholder="Item Name.." type="text" value="" formControlName="itemName">
+        <mat-error *ngIf="itemName?.errors?.required">
+            ItemName is required.
+      </mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width" appearance="fill">
+        <input matInput placeholder="Image." type="text" value="" formControlName="image">
+        <mat-error *ngIf="image?.errors?.required">
+            Image is required.
+      </mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width" appearance="fill">
+        <input matInput placeholder="price.." type="number" value="" formControlName="price">
+        <mat-error *ngIf="price?.errors?.required">
+            Price is required.
+      </mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width" appearance="fill">
+        <input matInput placeholder="Rating.." type="number" value="" formControlName="rating">
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width" appearance="fill">
+        <input matInput placeholder="itemType.." type="text" value="" formControlName="itemType">
+        <mat-error *ngIf="itemType?.errors?.required">
+            itemType is required.
+      </mat-error>
+      </mat-form-field>
+    </div>
+
+    <button  (click)="addRestaurantData() "style="margin-right: 40px;" mat-raised-button color="accent">Submit</button>
+
+
+</form>
+</mat-card>

@@ -1,0 +1,29 @@
+<!-- <p>checkout works!</p> -->
+<mat-card class="example-card" *ngIf="itemInfo">
+    <img mat-card-image src="../../assets/{{itemInfo.image}}.jpg">
+    <mat-card-header>
+      <mat-card-title>{{itemInfo.itemName}}</mat-card-title>
+      <mat-card-subtitle>{{itemInfo.itemType}}</mat-card-subtitle>
+    </mat-card-header>
+   
+    <mat-card-content>
+      <div class="div"><h2>Quantity:</h2> 
+        <button class="btn btn-primary button" (click)="minus(itemInfo.price)"><mat-icon>remove</mat-icon></button>
+        <input type="text" class="form-control" [(ngModel)]="quantitys">
+        <button  class="btn btn-primary button" (click)="plus(itemInfo.price)"><mat-icon>add</mat-icon></button> 
+      </div>
+
+      <div>
+        <h2>Bill details</h2>
+        <h4>Item Price</h4>  <span> ₹{{itemInfo.price}}</span>
+      </div>
+      <h4>Total Price</h4>  <span>₹{{totalPrices}}</span>
+  
+      </mat-card-content>
+    <mat-card-actions >
+      <button matTooltip="Add to shopping cart" (click)="cart(itemInfo)" class="cart" mat-button><mat-icon>add_shopping_cart</mat-icon></button>
+      <!-- <button matTooltip="Add to favorites" (click)="fav(itemInfo)" class="fav" mat-button><mat-icon>favorite_border</mat-icon></button> -->
+     <button *ngIf="!favicon" matTooltip="Add to favorites" (click)="fav(itemInfo)" class="fav" mat-button><mat-icon>favorite_border</mat-icon></button>
+      <button *ngIf="favicon" matTooltip="Add to favorites" (click)="fav(itemInfo)" class="favo" mat-button><mat-icon>favorite</mat-icon></button>
+    </mat-card-actions>
+  </mat-card>

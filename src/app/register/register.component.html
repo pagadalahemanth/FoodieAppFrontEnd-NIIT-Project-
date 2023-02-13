@@ -1,0 +1,92 @@
+<!-- <p>register works!</p> -->
+<mat-card >
+
+        <h1>Sign Up</h1>
+
+
+<form #registrationForm="ngForm" [formGroup]="userdetails">
+
+
+
+  <div>
+    <mat-form-field style="width: 100%;" appearance="fill">
+        <mat-label>Email...</mat-label>
+        <input matInput placeholder="Enter email" formControlName="email" >
+        <mat-error *ngIf="email?.errors?.required">
+          Email is required.
+      </mat-error>
+      <mat-error *ngIf="email?.errors?.email">
+          Enter valid email.
+      </mat-error>
+        <mat-icon matSuffix>email</mat-icon>
+      </mat-form-field>
+</div>
+<!-- <input type="text" name="name" pattern="[a-zA-Z][a-zA-Z ]{2,}" required> -->
+<div>
+  <mat-form-field  style="width: 100%;" appearance="fill">
+    <mat-label> Name..</mat-label>
+    <input matInput placeholder="Enter Name" formControlName="name" type="text" name="name"  required>
+    <mat-error *ngIf="name?.errors?.required">
+      Name is required.
+    </mat-error>
+  <mat-error *ngIf="name?.errors?.pattern">
+    No numbers allowed only chars.
+  </mat-error>
+    <mat-icon matSuffix>person</mat-icon>
+  </mat-form-field>
+
+</div>
+
+
+<div style="margin-bottom: 20px;">
+    <mat-form-field style="margin-right: 40px;" appearance="fill">
+        <mat-label>Pasword</mat-label>
+        <input matInput placeholder="Password" formControlName="password" type="password">
+        <mat-error *ngIf="password?.errors?.required">
+          Password is required.
+        </mat-error>
+        <mat-error *ngIf="password?.errors?.pattern">
+            Password should have min 8 characters 
+        </mat-error>
+        <mat-icon matSuffix>vpn_key</mat-icon>
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Confirm Password</mat-label>
+        <input matInput placeholder="confirm password.." formControlName="cpassword" type="password">
+        <mat-error *ngIf="cpassword?.errors?.required">
+          cPassword is required.
+        </mat-error>
+        <mat-error *ngIf="cpassword?.errors?.pattern">
+            Password should have min 8 char and a symbol 
+        </mat-error>
+          <div *ngIf="userdetails.errors?.mustmatch==false">
+            password did not match</div>
+        <mat-icon matSuffix>vpn_key</mat-icon>
+      </mat-form-field>
+</div>
+
+<div>
+    <mat-form-field  style="width: 100%;" appearance="fill">
+        <mat-label> Image..</mat-label>
+        <input matInput placeholder="Upload Image" formControlName="image" name="image"  required>
+        <mat-error *ngIf="image?.errors?.required">
+          Image is required.
+        </mat-error>
+        <mat-icon matSuffix>image</mat-icon>
+      </mat-form-field>
+</div>
+
+<div style="margin-bottom: 20px;">
+    <mat-radio-group aria-label="Select an option" formControlName="usertype">
+        <div> <span class="head" >usertype</span>
+        <!-- <mat-radio-button  value="admin">Admin</mat-radio-button> -->
+        <mat-radio-button value="user">User</mat-radio-button></div>
+      </mat-radio-group>
+      
+</div>
+
+<button [disabled]="userdetails.invalid" (click)="addData() "style="margin-right: 40px;" mat-raised-button color="accent">Submit</button>
+
+</form>
+<span>Already registered?   <a routerLink="/login">Log in</a></span>
+</mat-card>

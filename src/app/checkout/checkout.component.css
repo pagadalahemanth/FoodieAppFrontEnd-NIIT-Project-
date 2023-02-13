@@ -1,0 +1,87 @@
+.example-card {
+  max-width: 400px;
+  border-radius: 30px;
+  background-color:#E1EBEE;
+  
+  margin-left: auto;
+  margin-right: auto;
+  max-width: fit-content;
+  margin-top: -150px;
+}
+mat-card-subtitle{
+  font-size: inherit;
+  width: fit-content;
+}
+img{
+  width: 200px;
+  height: 150px;
+  border-radius: 30px;
+  padding: 20px;
+}
+mat-card-content{
+  margin-top: -10px;
+}
+mat-card-header{
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+inline-size: 120px;
+overflow-wrap: break-word;
+float: right;
+margin-right: 50px;
+margin-top: 30px;
+}
+input{
+width: 70px;
+height: 30px;
+margin: 5px;
+text-align:center
+}
+.div{
+margin-top: 50px;
+display: flex;
+padding: 10px;
+}
+.button{
+background-color: darkcyan;
+margin: 5px;
+height: 30px;
+width: 35px;
+padding: 3px;
+}
+span{
+float: right;
+margin-top: -40px;
+}
+h2{
+font-family: 'Times New Roman', Times, serif;
+}
+h4{
+font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.example-full-width {
+width: 100%;
+}
+.cart{
+color: blue;
+border: transparent;
+margin-left: 20px;
+background-color: transparent;
+}
+.fav{
+color: red;
+border: transparent;
+margin-left: 250px;
+background-color: transparent;
+}
+.favo{
+color:red;
+border: transparent;
+margin-left: 250px;
+/* background-color: transparent; */
+}
+
+
+
+
+
+
+

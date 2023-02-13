@@ -1,0 +1,20 @@
+img{
+    width: 30%;
+    
+}
+div{
+    text-align: center;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+button{
+    background-color: cadetblue;
+    padding: 8px ;
+    color: white;
+    border-radius: 20px;
+    border-color: cadetblue;
+    font-size: medium;
+    font-family: italic;
+}

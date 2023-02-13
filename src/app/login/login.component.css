@@ -1,0 +1,38 @@
+mat-card{
+    background-color:whitesmoke ;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 490px;
+    margin-top: -150px;
+    border-radius: 15px;
+}
+button{
+    background-color: cadetblue;
+    padding: 8px ;
+    color: white;
+    border-radius: 5px;
+    border-color: rgb(107, 172, 174);
+    font-size: large;
+    font-family: italic;
+    width: 100%;
+}
+
+h1{
+    color: black;
+    font-weight: 500;
+}
+mat-form-field{
+    width: 100%;
+}
+a{
+    text-decoration: none;
+    padding-left: 10px;
+    color: cadetblue;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: medium;
+}
+p{
+    margin-top: 10px;
+    font-family: italic;
+    font-size: large;
+}

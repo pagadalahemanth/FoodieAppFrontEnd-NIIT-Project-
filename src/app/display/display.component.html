@@ -1,0 +1,31 @@
+<div class="back">
+<br>
+    <div *ngFor="let details of restaurantDetails">
+      <div>
+        <h1>{{details.restaurantName}}</h1>
+        <h3>{{details.location}}</h3>
+      </div>
+      <button (click)="deleteRes(details.restaurantName)" *ngIf="ls.adminLoggedIn" class="del">Delete Restaurant</button>
+    <div class="alignment">
+
+    <mat-card class="card2"  *ngFor="let food of details.foodList"> 
+      <!-- <a routerLink="/checkout/{{details.restaurantName}}/{{food.itemName}}"> -->
+        <img mat-card-image src="../../assets/{{food.image}}.jpg" (click)="checkout(details.restaurantName,food.itemName)">
+        <mat-card-header>
+          <mat-card-title>{{food.itemName}}</mat-card-title>
+          <span><mat-card-subtitle>{{food.itemType}}</mat-card-subtitle></span>
+          </mat-card-header>
+         
+
+          <mat-card-content>
+            <span>₹{{food.price}}   for One</span>
+                <span class="rating">{{food.rating}}<mat-icon>star</mat-icon></span>
+            <!-- <span>{{food.quantity}}</span> -->
+          </mat-card-content>
+         
+     
+        </mat-card> 
+
+    </div>
+  </div>
+  <app-footer></app-footer>

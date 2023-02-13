@@ -1,0 +1,36 @@
+<!-- <p>add-to-cart works!</p> -->
+<mat-card class="alignment">
+<mat-card class="example-card" *ngFor="let cart of cartItems">
+    <img mat-card-image src="../../assets/{{cart.foodList.image}}.jpg" >
+    <div class="cart">
+    <mat-card-header>
+     <mat-card-title>{{cart.foodList.itemName}}</mat-card-title>
+      <mat-card-subtitle>{{cart.foodList.itemType}}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <!-- <div class="div"><h2>Quantity:</h2> 
+        <button class="btn btn-primary button" (click)="minus(cart.foodList.price,cart.quantity)"><mat-icon>remove</mat-icon></button>
+        <input type="text" class="form-control" [(ngModel)]="cart.quantity">
+        <button  class="btn btn-primary button" (click)="plus(cart.foodList.price,cart.quantity)"><mat-icon>add</mat-icon></button> 
+
+      </div> -->
+      <div>Quantity : {{cart.quantity}}</div>
+      <div>Price : {{cart.totalPrice}}</div>
+    </mat-card-content>
+  </div>
+    <mat-card-actions>
+      <button class="button" (click)="delete(cart.foodList.itemName)">Remove</button>
+    </mat-card-actions>
+  </mat-card>
+<mat-card class="address">
+    <div>
+       Total price:  {{total}}
+    </div>
+    <mat-form-field class="example-full-width">
+        <mat-label>Delivery Address</mat-label>
+        <textarea matInput></textarea>
+      </mat-form-field>
+      <div><button (click)="addToCart()" >Buy Now</button></div>
+    </mat-card>
+    <app-footer></app-footer>
+</mat-card>

@@ -1,0 +1,26 @@
+<!-- <p>restaurant-owner works!</p> -->
+<div class="back">
+    <br>
+        <div *ngIf="details">
+          <div>
+            <h1>{{details.restaurantName}}</h1>
+            <h3>{{details.location}}</h3>
+          </div>
+          <button routerLink="/addItems"><mat-icon class="icon">add_circle</mat-icon></button>
+        <div>
+    
+        <mat-card class="example-card"  *ngFor="let food of details.foodList"> 
+            <img mat-card-image src="../../assets/{{food.image}}.jpg"> 
+            <mat-card-header>
+              <mat-card-title>{{food.itemName}}</mat-card-title>
+              <span><mat-card-subtitle>{{food.itemType}}</mat-card-subtitle></span>
+              </mat-card-header>
+              <mat-card-content>
+                <span>₹{{food.price}}   for One</span>
+                <mat-icon (click)="deleteItem(details.restaurantName,food)" class="delete">delete</mat-icon>
+                    <span class="rating">{{food.rating}}<mat-icon>star</mat-icon></span>
+              </mat-card-content>
+            </mat-card> 
+    
+        </div>
+      </div>

@@ -1,0 +1,81 @@
+.back{
+    margin-top: 0px;
+    background-color: beige;
+  }
+  .example-card {
+    max-width: 400px;
+    border-radius: 5px;
+    display: inline-block;
+    margin-bottom: 50px;
+    margin-right: 50px;
+    margin-left: 110px;
+  }
+  img{
+    padding: 5px;
+    border-radius: 10px;
+    width: 340px;
+    height: 250px;
+  }
+  span{
+    margin-left: 5px;
+  }
+  mat-icon{
+    color: whitesmoke;
+    position:relative;
+    bottom:-4px;
+    font-size: large;
+  }
+  .rating{
+    border: 2px solid green;
+    font-size: medium;
+    background-color: green;
+    color: whitesmoke;
+    border-radius: 10px 10px;
+    padding-left: 5px;
+    margin-left: 80px;
+  }
+  mat-card-header{
+    display: flex;
+  }
+  h1{
+    
+    margin-left: 110px;
+    margin-top: 30px;
+    font-family: Open Sans;
+    font-size: xx-large;
+  }
+  h3{
+    
+    margin-left: 110px;
+    font-family: Open Sans;
+    font-size: larger;
+  }
+  mat-card-title{
+    font-family: Playfair Display;
+  }
+  mat-card-subtitle{
+    font-family: Montserrat;
+    font-size: inherit;
+    /* inline-size: 200px;
+    overflow-wrap: break-word; */
+  }
+  mat-card-content{
+    font-family: Open Sans;
+    font-size: large;
+  }
+  button{
+    float: right;
+    margin-top: -80px;
+    margin-right: 100px;
+    border-color: transparent;
+    background-color: transparent;
+  }
+  .icon{
+    color: cadetblue;
+    font-size: 350%;
+  }
+  .delete{
+    color: red;
+    font-size: x-large;
+    margin-left: 60px;
+  }

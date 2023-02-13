@@ -1,0 +1,38 @@
+<!-- <p>login works!</p> -->
+<mat-card>
+
+        <h1>Login Form</h1>
+
+<form [formGroup]="logindetails">
+<div>
+  <mat-form-field appearance="fill">
+    <mat-label>Email Id..</mat-label>
+    <input matInput placeholder="Enter EmailId" formControlName="email" type="text">
+  <mat-error *ngIf="email?.errors?.required">
+    First Name is required.
+  </mat-error>
+    <mat-icon matSuffix>email</mat-icon>
+  </mat-form-field>
+</div>
+  <div>
+  <mat-form-field appearance="fill">
+    <mat-label>Password..</mat-label>
+    <input matInput placeholder="Enter Password" formControlName="password" type="password">
+    <mat-error *ngIf="password?.errors?.required">
+      Last Name is required.
+    </mat-error>
+    <mat-icon matSuffix>vpn_key</mat-icon>
+  </mat-form-field>
+</div>
+
+<section>
+    <div class="example-button-row">
+      <!-- <button style="margin-right: 40px; margin-left: 100px;" mat-raised-button color="primary">Reset</button> -->
+      <button [disabled]="logindetails.invalid" (click)="addLogData() "style="margin-right: 40px;" mat-raised-button color="accent">Submit</button>
+    </div>
+  </section>
+  <p>Don't have an account?   <a routerLink="/register">SIGNUP</a></p>
+</form>
+
+
+</mat-card>

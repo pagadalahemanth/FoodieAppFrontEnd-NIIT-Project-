@@ -1,0 +1,37 @@
+<!-- <p>admin-restaurant works!</p> -->
+<mat-card>
+<div>
+    <h1>Register your restaurant</h1>
+</div>
+<form class="example-form" [formGroup]="resDetails">
+<div>
+    <mat-form-field class="example-full-width" appearance="fill">
+      <input matInput placeholder="Restaurant Name.." type="text" value="" formControlName="restaurantName">
+      <mat-error *ngIf="restaurantName?.errors?.required">
+        RestaurantName is required.
+    </mat-error>
+    </mat-form-field>
+</div>
+<div>
+  <mat-form-field appearance="fill">
+    <mat-label>Password..</mat-label>
+    <input matInput placeholder="Enter Password" formControlName="password" type="password">
+    <mat-error *ngIf="password?.errors?.required">
+      Last Name is required.
+    </mat-error>
+    <mat-icon matSuffix>vpn_key</mat-icon>
+  </mat-form-field>
+</div>
+<div>
+    <mat-form-field class="example-full-width" appearance="fill">
+        <input matInput placeholder="Location.." type="text" value="" formControlName="location">
+        <mat-error *ngIf="location?.errors?.required">
+          Location is required.
+      </mat-error>
+      </mat-form-field>
+    </div>
+      <button [disabled]="resDetails.invalid" (click)="addResData() "style="margin-right: 40px;" mat-raised-button color="accent">Submit</button>
+
+      <div class="p">Already registered?    <a routerLink="/owner">Goto Dashboard</a></div>
+</form>
+</mat-card>

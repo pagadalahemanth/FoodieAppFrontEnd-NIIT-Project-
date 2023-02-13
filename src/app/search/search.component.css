@@ -1,0 +1,17 @@
+
+     div{
+      text-align: center;
+      margin-top: -140px;
+
+     }
+     .icon{
+      color:blue ; 
+      font-size: 25px;
+    }
+    mat-form-field{
+      background-color: whitesmoke;
+      width: 25%;
+      height: 50px;
+      border-radius: 5px;
+      }
+     

@@ -1,0 +1,27 @@
+
+<mat-toolbar>
+    <span class="example-spacer"><a routerLink="/">WooFoo</a></span>
+    <!-- <span class="example-spacer"></span> -->
+    <div>
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+      <a routerLink="fav">Favorites</a>
+    </button>
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+      <a routerLink="cart">Cart</a>
+    </button>
+    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+      <a routerLink="addRestaurant">Add restaurant</a>
+    </button>
+    <button *ngIf="!ls.LoggedIn" mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+      <a routerLink="login">Login</a>
+    </button>
+   
+    <button *ngIf="!ls.LoggedIn"  mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+        <a routerLink="register"> SignUp</a>
+      </button>
+      <button  (click)="logout()" *ngIf="ls.LoggedIn" mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+        <a routerLink="">Logout</a>
+      </button>
+      <img *ngIf="ls.LoggedIn" src="../../assets/{{ls.logInImage}}.jpg">
+    </div>
+  </mat-toolbar>

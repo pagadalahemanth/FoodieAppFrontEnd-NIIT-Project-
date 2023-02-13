@@ -1,0 +1,13 @@
+{
+  "register": [
+    {
+      "email": "pradeep07@gmail.com",
+      "name": "pradeep",
+      "password": "pradeep07",
+      "cpassword": "pradeep07",
+      "image": "display1",
+      "usertype": "user",
+      "id": 1
+    }
+  ]
+}
